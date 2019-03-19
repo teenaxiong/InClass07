@@ -93,7 +93,7 @@ public class ExpenseApp extends Fragment {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 mListener.removeExpense(i);
                 Toast.makeText(getActivity(), "Expense Deleted", Toast.LENGTH_SHORT).show();
-                return false;
+                return true;
             }
         });
 

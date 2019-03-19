@@ -32,7 +32,7 @@ public class ListAdapter extends ArrayAdapter<Expense> {
         }
 
         viewHolder.name.setText(expense.getName());
-        viewHolder.money.append(String.valueOf(expense.getAmount()));
+        viewHolder.money.setText(String.valueOf(expense.getAmount()));
 
         return convertView;
     }

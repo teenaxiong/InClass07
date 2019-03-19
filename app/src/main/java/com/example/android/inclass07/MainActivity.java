@@ -1,6 +1,6 @@
 package com.example.android.inclass07;
 /*
-Teena Xiong
+Teena Xiong & Shikha Bhattarai
 In Class 07
  */
 import android.app.Fragment;
