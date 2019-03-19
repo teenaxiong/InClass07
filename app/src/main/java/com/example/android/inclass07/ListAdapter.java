@@ -12,8 +12,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends ArrayAdapter<Expense> {
+    Context context;
     public ListAdapter(Context context, int resource, ArrayList<Expense> objects) {
         super(context, resource, objects);
+        this.context = context;
 
     }
 
@@ -32,7 +34,7 @@ public class ListAdapter extends ArrayAdapter<Expense> {
         }
 
         viewHolder.name.setText(expense.getName());
-        viewHolder.money.setText(String.valueOf(expense.getAmount()));
+        viewHolder.money.setText(context.getResources().getString(R.string.dollarSign) + String.valueOf(expense.getAmount()));
 
         return convertView;
     }

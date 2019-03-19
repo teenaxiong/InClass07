@@ -41,7 +41,7 @@ public class ShowExpenses extends Fragment {
         categoryText.setText(category);
 
         TextView amountText = getActivity().findViewById(R.id.showAmount);
-        amountText.append(amount);
+        amountText.setText(getActivity().getResources().getString(R.string.dollarSign) + amount);
 
         TextView dateText = getActivity().findViewById(R.id.showDate);
         dateText.setText(date);
