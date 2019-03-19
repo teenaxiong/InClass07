@@ -49,7 +49,7 @@ public class ShowExpenses extends Fragment {
         getActivity().findViewById(R.id.buttonClose).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ExpenseApp(), "ExpenseApp").commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new ExpenseApp(), "ExpenseApp").addToBackStack(null).commit();
             }
         });
         super.onActivityCreated(savedInstanceState);
