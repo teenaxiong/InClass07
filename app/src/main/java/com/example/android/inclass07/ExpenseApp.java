@@ -136,7 +136,9 @@ public class ExpenseApp extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         void checkArrayList();
+
         void showExpenses(int i);
+
         void removeExpense(int i);
     }
 }

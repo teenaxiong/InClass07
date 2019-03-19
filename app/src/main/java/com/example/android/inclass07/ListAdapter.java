@@ -17,28 +17,27 @@ public class ListAdapter extends ArrayAdapter<Expense> {
 
     }
 
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         Expense expense = getItem(position);
         ViewHolder viewHolder;
-        if(convertView == null){
+        if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.listlayout, parent, false);
             viewHolder = new ViewHolder();
             viewHolder.name = convertView.findViewById(R.id.nameLabel);
             viewHolder.money = convertView.findViewById(R.id.moneyLabel);
             convertView.setTag(viewHolder);
-        }else{
+        } else {
             viewHolder = (ViewHolder) convertView.getTag();
         }
-
 
         viewHolder.name.setText(expense.getName());
         viewHolder.money.append(String.valueOf(expense.getAmount()));
 
         return convertView;
     }
-    private static class ViewHolder{
+
+    private static class ViewHolder {
         TextView name, money;
     }
 

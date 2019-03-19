@@ -96,13 +96,13 @@ public class AddExpense extends Fragment {
             String mytime = (DateFormat.format("MM-dd-yyyy", new java.util.Date()).toString());
 
             public void onClick(View view) {
-                if(name.getText().toString().isEmpty()){
+                if (name.getText().toString().isEmpty()) {
                     Toast.makeText(getActivity(), "Sorry, Please enter a name", Toast.LENGTH_SHORT).show();
-                }else if(money.getText().toString().isEmpty()){
+                } else if (money.getText().toString().isEmpty()) {
                     Toast.makeText(getActivity(), "Sorry, Please enter an amount", Toast.LENGTH_SHORT).show();
-                }else {
+                } else {
                     String moneyString = money.getText().toString().trim();
-                    double myDouble= Double.valueOf(moneyString);
+                    double myDouble = Double.valueOf(moneyString);
                     Expense expense = new Expense(name.getText().toString(), spinner.getSelectedItem().toString(), myDouble, mytime);
 
                     mListener.addExpenseToArray(expense);
@@ -113,7 +113,7 @@ public class AddExpense extends Fragment {
         getActivity().findViewById(R.id.cancelButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().popBackStack("ExpenseApp",  FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                getActivity().getSupportFragmentManager().popBackStack("ExpenseApp", FragmentManager.POP_BACK_STACK_INCLUSIVE);
             }
         });
     }

@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity implements ExpenseApp.OnFrag
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         array = new ArrayList<>();
-
-
-        array = new ArrayList<>();
-        //array.add(new Expense("Electricity Bill", "Utilities", "3/14/2018", 80.00));
         getSupportFragmentManager().beginTransaction().add(R.id.container, new ExpenseApp(), "ExpenseApp").commit();
     }
 
@@ -72,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements ExpenseApp.OnFrag
     @Override
     public void addExpenseToArray(Expense expense) {
         array.add(expense);
+        getSupportFragmentManager().getBackStackEntryCount();
         getSupportFragmentManager().popBackStack("ExpenseApp",  FragmentManager.POP_BACK_STACK_INCLUSIVE);
     }
 }
