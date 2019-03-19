@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">InClass07</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buttonAdd">Add</string>
+    <string name="currentExpenseLabel">Current Expense</string>
+    <string name="addExpenseLabel">Add Expense:</string>
+    <string name="expenseName">Expense Name:</string>
+    <string name="emptyArrayMessage">There is no expense to show, Please add your expenses from the menu.</string>
+    <string name="amount">Amount:</string>
+    <string name="addExpense">Add Expense</string>
+    <string name="cancelButton">Cancel</string>
+    <string name="ShowExpenseTitle">Expense Details</string>
+    <string name="name">Name:</string>
+    <string name="category">Category:</string>
+    <string name="amount01">Amount:</string>
+    <string name="date">Date:</string>
+    <string name="closeButton">Close</string>
+    <string name="dollarSign">$</string>
+</resources>
